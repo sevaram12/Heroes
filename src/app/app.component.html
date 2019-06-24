@@ -1,0 +1,33 @@
+<div class="container">
+  
+      <h2 class="herous_h2">Tour of Heroes</h2>
+      <div class="btn">
+        <button (click)="dashbaord(1)" [ngClass]="(val=='1')?'btn-change':'btn-color'">Dashboard</button>
+        <button (click)="dashbaord(2)" [ngClass]="(val=='2')?'btn-change':'btn-color'">Heroes</button>
+      </div>
+
+      <h2 style="text-align: center;" *ngIf="val===1" class="herous_h2">Top Heroes</h2>
+      <div  class="row custom-row" *ngIf="val===1">
+        
+          <ng-container   *ngFor="let top_heroes of user_heroes; let i=index" ><div class="col-md-3 cust_div" (click)="select(3,top_heroes.id,top_heroes.name)" *ngIf="i<4;">{{ top_heroes.name }}</div></ng-container>
+                    
+      </div>  
+
+      <div *ngIf="val===3">
+        <h3>{{current_selected.name}} details!</h3>
+        <p><span class="up_color"> id:</span>  {{current_selected.id}}</p>
+        <span class="up_color"> Name:</span><input type="text" name="use" id="user" [(ngModel)]="current_selected.name" ><br><br>
+        <button (click)="update_data()">Back</button>
+      </div>
+
+      <div *ngIf="val===2 || val===4">
+        <h2>My Heroes</h2>
+        <ul class="heroes"><li [ngClass]="(current_selected.id==heroes_name.id)?'li-change':'t'" *ngFor="let heroes_name of user_heroes" (click)="select(4,heroes_name.id,heroes_name.name)"><span class="cust_user">{{heroes_name.id}}</span>{{heroes_name.name}}</li></ul>
+     
+      </div><br><br>
+      <div *ngIf="val===4">
+        <h2 class="up_color">{{current_selected.name}} is My Hero</h2><br><br>
+        <button (click)="select(3,current_selected.id,current_selected.name)">View Detail</button>
+      </div>
+
+</div>

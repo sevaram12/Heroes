@@ -1,0 +1,100 @@
+.herous_h2{
+	color: gray;
+}
+.btn button{
+   background: #d0caca6b;
+    height: 32px;
+}
+.btn button:nth-child(2){
+   margin-left: 10px;
+}
+
+.col-md-3.cust_div {
+    background-color: #5f7d8c;
+    height: 135px;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    font-weight: 700;
+}
+.cust_list{
+	background-color: #5b7a89;
+}
+
+/*.cust_user{
+	
+	padding: 6px 11px;
+}*/
+.up_color{
+	color: #5f7d8c;
+	font-weight: 700;
+}    
+.custom-row {
+    margin: 0;
+    width: 97%;
+    display: -webkit-box;
+}
+.custom-row .col-md-3 {
+    margin: 5px;
+}
+@media screen and (max-width: 800px) {
+.custom-row {
+    display: block;
+}
+}
+.heroes {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.heroes li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+
+.heroes li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+
+.heroes .cust_user {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color:#405061;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+.heroes .text {
+  position: relative;
+  top: -3px;
+}
+.btn-color{
+	font-weight: 600;
+}
+.btn-change{
+	color: #0599e8;
+	font-weight: 600;
+}
+.li-change{
+	background: gainsboro !important;
+}
+.col-md-3.cust_div:hover {
+    background: #eae7e7;
+    color: #5f7d8c;
+}
