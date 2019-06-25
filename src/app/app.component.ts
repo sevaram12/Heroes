@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
  
 val:any=1;	
-current_selected={};
+current_selected:any={};
 
 user_heroes=[
 
